@@ -1,0 +1,57 @@
+<!-- views/createUser.ejs -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <style>
+      form {
+        max-width: 500px;
+        margin: 20px auto;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      input, select, textarea {
+        width: 100%;
+        padding: 8px;
+      }
+    </style>
+  </head>
+<body>
+  <h1><%= title %></h1>
+
+  <form action="/new" method="POST">
+    <div class="form-group">
+      <label for="itemName">Item Name: </label>
+      <input type="text" name="itemName" id="itemName" required>
+    </div>
+
+    <div class="form-group">
+      <label for="category">Category: </label>
+      <select name="category" id="category" required>
+        <option value="">Select a category</option>
+        <% categories.forEach(category => { %>
+          <option value="<%= category.id %>"><%= category.name %></option>
+        <% }); %>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="price">Price: </label>
+      <input type="number" name="price" id="price" step="0.01" required>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description: </label>
+      <textarea name="description" id="description" rows="4"></textarea>
+    </div>
+
+    <button type="submit">Add Item</button>
+  </form>
+  <a href="/">Back to home</a>
+</body>
+</html>

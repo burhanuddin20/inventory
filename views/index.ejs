@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventory Management System</title>
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .nav-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            transition: transform 0.2s;
+        }
+        .nav-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Inventory Management System</h1>
+        
+        <div class="nav-grid">
+            <a href="/categories" class="nav-item">
+                <h2>Categories</h2>
+                <p>Manage product categories</p>
+            </a>
+            
+            <a href="/items" class="nav-item">
+                <h2>Items</h2>
+                <p>View and manage all items</p>
+            </a>
+            
+            <a href="/items/new" class="nav-item">
+                <h2>Add Item</h2>
+                <p>Add new items to inventory</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html> 

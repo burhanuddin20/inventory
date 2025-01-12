@@ -1,0 +1,7 @@
+/db/
+.env
+
+/scripts/
+logs/
+node_modules/
+
